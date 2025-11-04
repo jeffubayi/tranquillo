@@ -16,11 +16,6 @@
 
 ## 📱 Screenshots
 
-<!-- You can upload screenshots here once available -->
-
-
-![](https://tranquillo-shop.de/cdn/shop/files/Header_Logo_21869d21-c7db-4b79-8390-eb6ef9651810.png?v=1739175475&width=280)
-
 
 ## 🛠️ Tech Stack
 
