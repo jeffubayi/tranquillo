@@ -11,45 +11,49 @@
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0C0E10"
-    },
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.jeflo.tranquillo",
-      "associatedDomains": ["applinks:zcdffliliytbpivqkavn.supabase.co"],
-      "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
+      "resizeMode": "cover",
+      "backgroundColor": "#05665e"
     },
     "android": {
+      "splash": {
+        "image": "./assets/splash-icon.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#05665e"
+      },
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0C0E10"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.jeflo.tranquillo",
-      "intentFilters": [
-        {
-          "action": "VIEW",
-          "data": {
-            "scheme": "ai.tranquillo",
-            "host": "auth",
-            "pathPrefix": "/callback"
-          },
-          "category": ["BROWSABLE", "DEFAULT"]
-        }
-      ]
+      "package": "com.jeflo.tranquillo"
+    },
+    "ios": {
+      "splash": {
+        "image": "./assets/splash-icon.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#004F4F"
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jeflo.tranquillo",
+      "associatedDomains": [
+        "applinks:zcdffliliytbpivqkavn.supabase.co"
+      ],
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "web": {
       "favicon": "./assets/icon.png",
       "bundler": "metro"
     },
-    "plugins": ["expo-router", "expo-web-browser"],
+    "plugins": [
+      "expo-router",
+      "expo-web-browser"
+    ],
     "extra": {
       "EXPO_PUBLIC_APP_ENV": "production",
       "eas": {
-        "projectId": "087d70be-5ada-40ee-b226-76fb8582031d"
+        "projectId": "8cf26fea-5ada-4a4a-b81d-c39d8bbe9fd4"
       }
     }
   }
