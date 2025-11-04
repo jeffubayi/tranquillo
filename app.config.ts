@@ -1,9 +1,9 @@
 import { ConfigContext, ExpoConfig } from 'expo/config';
 import { version } from './package.json';
 
-const EAS_PROJECT_ID = '087d70be-5ada-40ee-b226-76fb8582031d';
+const EAS_PROJECT_ID = '8cf26fea-5ada-4a4a-b81d-c39d8bbe9fd4';
 const PROJECT_SLUG = 'tranquillo';
-const OWNER = 'damygoes';
+const OWNER = 'jeflo';
 
 const APP_NAME = 'tranquillo';
 const BUNDLE_IDENTIFIER = 'com.jeflo.tranquillo';
