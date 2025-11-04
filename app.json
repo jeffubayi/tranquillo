@@ -2,6 +2,8 @@
   "expo": {
     "name": "tranquillo",
     "slug": "tranquillo",
+    "scheme": "ai.tranquillo",
+    "deepLinking": true,
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,21 +12,45 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0C0E10"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jeflo.tranquillo",
+      "associatedDomains": ["applinks:zcdffliliytbpivqkavn.supabase.co"],
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0C0E10"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "package": "com.jeflo.tranquillo",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "ai.tranquillo",
+            "host": "auth",
+            "pathPrefix": "/callback"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png",
+      "bundler": "metro"
+    },
+    "plugins": ["expo-router", "expo-web-browser"],
+    "extra": {
+      "EXPO_PUBLIC_APP_ENV": "production",
+      "eas": {
+        "projectId": "087d70be-5ada-40ee-b226-76fb8582031d"
+      }
     }
   }
 }
