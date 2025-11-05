@@ -3,7 +3,7 @@ import { supabase } from '@/services/supabase';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 export type UserProfileUpdate = {
-  first_name?: string;
+  username?: string;
   emotion_check?: string;
   bio?: string;
   onboarded?: boolean;
@@ -16,16 +16,13 @@ export function useUpdateUserProfile(userId: string) {
     mutationFn: async (updates: UserProfileUpdate) => {
       const { data, error } = await supabase
         .from('profiles')
-        .update({
-          first_name: updates.first_name,
-          onboarded: updates.onboarded,
-        })
+        .update(updates)
         .eq('id', userId)
         .select('*')
         .maybeSingle();
 
       if (error) throw error;
-      return { first_name: data.first_name, ...data };
+      return { username: data.username, ...data };
     },
     onSuccess: (data) => {
       if (!data) return;

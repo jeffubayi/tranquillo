@@ -9,18 +9,12 @@ type Props = {
   userId: string;
   email: string;
   bio?: string | null;
-  first_name: string | null;
+  username: string | null;
   onProfileUpdate?: () => void;
 };
 
-export function ProfileForm({
-  userId,
-  email,
-  bio,
-  first_name,
-  onProfileUpdate,
-}: Props) {
-  const [displayName, setDisplayName] = useState(first_name || '');
+export function ProfileForm({ userId, email, bio, username, onProfileUpdate }: Props) {
+  const [displayName, setDisplayName] = useState(username || '');
   const [userBio, setUserBio] = useState(bio || '');
   const [editing, setEditing] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -29,7 +23,7 @@ export function ProfileForm({
     try {
       setSaving(true);
       await useUpdateUserProfile(userId, {
-        first_name: displayName,
+        username: displayName,
         bio: userBio,
       });
       await onProfileUpdate?.();
@@ -52,7 +46,7 @@ export function ProfileForm({
       ]}
     >
       {renderField({
-        label: 'first_name',
+        label: 'username',
         value: displayName,
         setValue: setDisplayName,
         editing,
@@ -67,31 +61,18 @@ export function ProfileForm({
       })}
 
       <Text
-        style={[
-          styles.label,
-          { color: APP_COLORS['body-text-disabled'], fontFamily: 'Manrope' },
-        ]}
+        style={[styles.label, { color: APP_COLORS['body-text-disabled'], fontFamily: 'Manrope' }]}
       >
         Email
       </Text>
-      <Text
-        style={[
-          styles.staticText,
-          { color: APP_COLORS['body-text'], fontFamily: 'Manrope' },
-        ]}
-      >
+      <Text style={[styles.staticText, { color: APP_COLORS['body-text'], fontFamily: 'Manrope' }]}>
         {email}
       </Text>
 
       <View style={styles.actions}>
         {editing ? (
           <>
-            <Button
-              title="Save"
-              onPress={handleSave}
-              loading={saving}
-              size="small"
-            />
+            <Button title="Save" onPress={handleSave} loading={saving} size="small" />
             <Button
               title="Cancel"
               onPress={() => setEditing(false)}

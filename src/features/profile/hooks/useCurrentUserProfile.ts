@@ -7,7 +7,6 @@ import { useQuery } from '@tanstack/react-query';
 export const useCurrentUserProfile = () => {
   const { session } = useSupabaseSession();
   const userId = session?.user.id;
-
   const isEnabled = !!userId && userId.trim() !== '';
 
   const { data, isLoading, error, refetch, isFetching } = useQuery<UserProfile>(

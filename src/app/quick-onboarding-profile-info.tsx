@@ -18,7 +18,7 @@ type ProfileSectionProps = {
 };
 
 export default function QuickOnboardingProfileInfo() {
-  const [first_name, setfirst_name] = useState('');
+  const [username, setusername] = useState('');
   const [moodCheck, setMoodCheck] = useState('');
   const [bio, setBio] = useState('');
 
@@ -27,11 +27,11 @@ export default function QuickOnboardingProfileInfo() {
   const { mutateAsync, isPending, isSuccess, error } = useUpdateUserProfile(userId);
 
   const isButtonDisabled =
-    isPending || first_name.trim() === '' || moodCheck.trim() === '' || bio.trim() === '';
+    isPending || username.trim() === '' || moodCheck.trim() === '' || bio.trim() === '';
 
   const handleSubmit = async () => {
     await mutateAsync({
-      first_name: first_name,
+      username: username,
       emotion_check: moodCheck,
       bio: bio,
       onboarded: true,
@@ -62,9 +62,9 @@ export default function QuickOnboardingProfileInfo() {
           <ProfileSection
             title="Hi there! 👋"
             description="I’m tranquillo — your journaling companion. What’s your name or nickname? I’d love to call you something personal."
-            value={first_name}
-            onChangeText={setfirst_name}
-            placeholder="Enter your first_name"
+            value={username}
+            onChangeText={setusername}
+            placeholder="Enter your username"
           />
 
           <ProfileSection

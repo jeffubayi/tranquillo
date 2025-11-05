@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { Alert, View } from 'react-native';
 
 export function LoginForm() {
-  const { sendMagicLink } = useAuthActions();
+  const { sendMagicLink, signUp } = useAuthActions();
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -26,10 +26,7 @@ export function LoginForm() {
 
     try {
       // await sendMagicLink(trimmedEmail);
-      await supabase.auth.signInWithPassword({
-        email,
-        password: 'qwerty',
-      });
+      await signUp(trimmedEmail, 'tranquillo');
       Alert.alert('Check Your Email', 'We sent you a magic link to log in.');
     } catch (err) {
       console.error('Magic link error:', err);
@@ -51,15 +48,6 @@ export function LoginForm() {
 
   return (
     <View className="w-full gap-8 px-2 py-4">
-      <Input
-        label="Email"
-        placeholder="Enter your email address"
-        value={email}
-        onChangeText={handleEmailChange}
-        keyboardType="email-address"
-        autoCapitalize="none"
-        error={error || undefined}
-      />
       <Input
         label="Email"
         placeholder="Enter your email address"

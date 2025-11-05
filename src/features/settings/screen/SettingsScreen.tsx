@@ -16,10 +16,10 @@ export default function SettingsScreen() {
         <Image
           // source={require('../../../../assets/images/hero-3.jpg')}
           source={{
-            uri: 'https://pbs.twimg.com/profile_banners/1468510188504498178/1650391351/1500x500',
+            uri: 'https://www.jardindeco.com/data/img/fournisseurs/full/logo-tranquillo-1.png',
           }}
           style={{ width: '100%', height: 200 }}
-          contentFit="cover"
+          contentFit="contain"
           cachePolicy="memory-disk"
           transition={300}
           priority="high"

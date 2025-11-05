@@ -24,18 +24,18 @@ export default function LandingScreen() {
               height: 300,
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'rgba(220, 86, 14, 0.1)',
+              backgroundColor: '#c5ddda',
             }}
           >
             <Image
-              source={require('../../assets/icon.png')}
-              style={{ width: 100, height: 100 }}
+              source={require('../../assets/logo.png')}
+              style={{ width: '100%', height: '80%' }}
               contentFit="contain"
               cachePolicy="memory-disk"
               transition={300}
               priority="high"
             />
-            <Text
+            {/* <Text
               style={{
                 color: APP_COLORS.primary,
                 fontWeight: '300',
@@ -43,7 +43,7 @@ export default function LandingScreen() {
               }}
             >
               tranquillo
-            </Text>
+            </Text> */}
           </View>
         }
         headerHeight={300}

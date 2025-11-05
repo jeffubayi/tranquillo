@@ -8,7 +8,7 @@ export default function OnboardingSceneOne() {
         {
           content: 'How are you feeling today?',
           position: 'top-left',
-          bgColor: '#DC560E1A',
+          bgColor: '#c5ddda',
         },
         {
           content: 'Today, I am feeling happy!',

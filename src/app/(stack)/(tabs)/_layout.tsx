@@ -20,9 +20,9 @@ export default function TabLayout() {
           borderBottomLeftRadius: 50,
           borderBottomRightRadius: 50,
           marginHorizontal: 20,
-          height: 80,
+          height: 60,
           position: 'absolute',
-          bottom: 40,
+          bottom: 30,
           backgroundColor: 'white',
           shadowColor: '#1a1a1a',
           shadowOffset: { width: 0, height: 2 },
@@ -36,27 +36,21 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol name="home" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="history"
         options={{
           title: 'History',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol name="history" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol name="history" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol name="settings" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol name="settings" size={24} color={color} />,
         }}
       />
     </Tabs>

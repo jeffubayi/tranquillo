@@ -11,24 +11,20 @@ export default function AddEntryScreen() {
   const { data: userProfile } = useCurrentUserProfile();
 
   const userDisplayName = useMemo(() => {
-    return userProfile?.first_name || 'User';
+    return userProfile?.username || 'User';
   }, [userProfile]);
 
   const [content, setContent] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { handleCreateEntry, createIsPending } =
-    useHandleJournalEntryCreation();
+  const { handleCreateEntry, createIsPending } = useHandleJournalEntryCreation();
 
-  const shouldDisableSubmit =
-    isSubmitting || createIsPending || content.trim().length === 0;
+  const shouldDisableSubmit = isSubmitting || createIsPending || content.trim().length === 0;
 
   const handleSubmit = async () => {
     if (!content.trim()) {
-      setError(
-        'A problem shared is a problem halved. Please share your thoughts.'
-      );
+      setError('A problem shared is a problem halved. Please share your thoughts.');
       return;
     }
 
@@ -51,9 +47,7 @@ export default function AddEntryScreen() {
       keyboardShouldPersistTaps="handled"
     >
       <View style={styles.container}>
-        <Text style={styles.title}>
-          How are you feeling today, {userDisplayName}?
-        </Text>
+        <Text style={styles.title}>How are you feeling today, {userDisplayName}?</Text>
 
         <Input
           value={content}
@@ -75,9 +69,7 @@ export default function AddEntryScreen() {
         )}
 
         <Button
-          title={
-            isSubmitting ? 'Logging Your Thoughts...' : 'Log Your Thoughts'
-          }
+          title={isSubmitting ? 'Logging Your Thoughts...' : 'Log Your Thoughts'}
           onPress={handleSubmit}
           disabled={shouldDisableSubmit}
           loading={isSubmitting}

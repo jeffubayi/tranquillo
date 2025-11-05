@@ -18,25 +18,13 @@ export function GreetingCard() {
         <Defs>
           <RadialGradient id="grad" cx="50%" cy="35%" r="80%" fx="50%" fy="35%">
             {/* center */}
-            <Stop
-              offset="0%"
-              stopColor={APP_COLORS.primary}
-              stopOpacity="0.5"
-            />
+            <Stop offset="0%" stopColor={APP_COLORS.primary} stopOpacity="0.5" />
 
             {/* middle - softened primary */}
-            <Stop
-              offset="50%"
-              stopColor={APP_COLORS.primary}
-              stopOpacity="0.4"
-            />
+            <Stop offset="50%" stopColor={APP_COLORS.primary} stopOpacity="0.4" />
 
             {/* edges - background color */}
-            <Stop
-              offset="100%"
-              stopColor={APP_COLORS['primary-background']}
-              stopOpacity="1"
-            />
+            <Stop offset="100%" stopColor={APP_COLORS['primary-background']} stopOpacity="1" />
           </RadialGradient>
         </Defs>
         <Rect x="0" y="0" width="100%" height="100%" fill="url(#grad)" />
@@ -67,17 +55,13 @@ export function GreetingCard() {
               fontSize: 24,
             }}
           >
-            {userProfile?.first_name}
+            {userProfile?.username}
           </Text>
         </Text>
       </SafeAreaView>
 
       {/* Curvy bottom wave */}
-      <Svg
-        width={width}
-        height={60}
-        style={{ position: 'absolute', bottom: 0 }}
-      >
+      <Svg width={width} height={60} style={{ position: 'absolute', bottom: 0 }}>
         <Path
           d={`M0 0 Q${width / 4} 10 ${width / 2} 40 T${width} 0 V80 H0 Z`}
           fill={APP_COLORS['primary-background']}

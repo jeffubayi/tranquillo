@@ -7,7 +7,7 @@ export default function UserProfileCard() {
   const { data } = useUserProfileContext();
 
   const getFallbackAvatar = () => {
-    const initials = data?.first_name
+    const initials = data?.username
       ?.split(' ')
       .map((name: string) => name.charAt(0).toUpperCase())
       .join('');
@@ -71,7 +71,7 @@ export default function UserProfileCard() {
             fontFamily: 'Manrope',
           }}
         >
-          {data?.first_name}
+          {data?.username}
         </Text>
         <Text
           style={{

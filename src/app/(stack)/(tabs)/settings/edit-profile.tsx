@@ -16,7 +16,7 @@ export default function EditProfileScreen() {
     <ProfileForm
       userId={userId}
       email={data.email}
-      first_name={data.first_name}
+      username={data.username}
       bio={data.bio}
       onProfileUpdate={handleProfileUpdate}
     />

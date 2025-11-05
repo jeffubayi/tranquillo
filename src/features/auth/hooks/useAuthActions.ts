@@ -1,6 +1,8 @@
 import { supabase } from '@/services/supabase';
 import { makeRedirectUri } from 'expo-auth-session';
+import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
+import { Alert } from 'react-native';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -22,6 +24,15 @@ export const useAuthActions = () => {
 
     if (error) throw error;
     console.log('✅ Magic link sent');
+  };
+
+  const signUp = async (email: string, password: string) => {
+    const { data: authData, error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+    console.log('user signed up:', authData.user);
+     if (error) throw error;
   };
 
   const createSessionFromUrl = async (url: string) => {
@@ -114,6 +125,7 @@ export const useAuthActions = () => {
   return {
     sendMagicLink,
     createSessionFromUrl,
+    signUp,
     performOAuth,
   };
 };

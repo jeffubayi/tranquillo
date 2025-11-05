@@ -2,7 +2,7 @@ import type { Features, PlanType } from '../paywall/types';
 
 export type UserProfile = {
   email: string;
-  first_name: string | null;
+  username: string | null;
   onboarded: boolean;
   created_at: string;
   avatar_url?: string | null;

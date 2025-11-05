@@ -30,10 +30,8 @@ export const JournalEntryList = ({
   if (isLoading) {
     return (
       <View className="items-center justify-center flex-1 space-y-2">
-        <ActivityIndicator size="large" />
-        <Text style={{ color: colors.textMuted }}>
-          Loading your journal entries...
-        </Text>
+        <ActivityIndicator size="large" color="#05665e" />
+        <Text style={{ color: colors.textMuted }}>Loading your journal entries...</Text>
       </View>
     );
   }

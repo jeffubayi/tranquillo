@@ -1,5 +1,5 @@
 import { COLORS } from '@/constants/colors';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useColorScheme } from '@/hooks/useColorScheme';
 import { Stack } from 'expo-router';
 
 export default function HistoryStackLayout() {
