@@ -2,7 +2,7 @@
 
 **Tranquillo** is a beautiful minimalistic mobile journaling app designed to help you gain mental clarity, build self-awareness, and track your emotional well-being. Built using **React Native**, **Expo**, and **Supabase**, it features a calm, glassy UI with secure authentication and real-time storage.
 
-![](https://tranquillo-shop.de/cdn/shop/files/Header_Logo_21869d21-c7db-4b79-8390-eb6ef9651810.png?v=1739175475&width=280)
+![](https://tranquillo-shop.de/cdn/shop/files/Header_Logo_21869d21-c7db-4b79-8390-eb6ef9651810.png?v=1739175475&width=200&height=100)
 
 ## ✨ Features
 
@@ -16,6 +16,9 @@
 
 ## 📱 Screenshots
 
+| Login                        | Home                        | History                        | Journal Entry                      | Edit Journal                        | Profile                        |
+| ---------------------------- | --------------------------- | ------------------------------ | ---------------------------------- | ----------------------------------- | ------------------------------ |
+| ![](./screenshots/onboarding.png) | ![](./screenshots/auth.png) | ![](./screenshots/history.png) | ![](./screenshots/add-journal.png) | ![](./screenshots/edit-journal.png) | ![](./screenshots/profile2.png) |
 
 ## 🛠️ Tech Stack
 
