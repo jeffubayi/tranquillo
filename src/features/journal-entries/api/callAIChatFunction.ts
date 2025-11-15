@@ -29,6 +29,8 @@ interface ProcessedAIData {
   ai_response: string;
 }
 
+const thera_api = process.env.EXPO_PUBLIC_THERA_API_KEY!;
+
 // Map mood rating to mood string
 const getMoodFromRating = (rating: number): string => {
   if (rating <= 2) return 'very_negative';
@@ -47,7 +49,7 @@ export const callAIChatFunction = async (
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer thera_api_8mkbvllbhflx9d2is9mge160zo7y95yx',
+        Authorization: `Bearer {thera_api}`,
       },
       body: JSON.stringify({
         message: content,
