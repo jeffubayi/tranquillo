@@ -25,10 +25,8 @@
 | ----------------------------------------------------------------- | ---------------------------------------- |
 | [Expo](https://expo.dev/)                                         | App scaffolding, build, and deployment   |
 | [React Native](https://reactnative.dev/)                          | Core framework for native UI             |
-| [Expo Router](https://expo.github.io/router/docs)                 | File-based routing system                |
 | [Supabase](https://supabase.com/)                                 | Backend as a service (Auth, DB, Storage) |
-| [Expo Blur](https://docs.expo.dev/versions/latest/sdk/blur-view/) | Glass UI / blur effects                  |
-| [clsx](https://www.npmjs.com/package/clsx)                        | Utility for conditional styling          |
+| [TheraApi](https://www.theraapi.com/)                        | Powerful APIs for Mental Wellness          |
 
 ## ⚙️ Installation
 
@@ -89,4 +87,3 @@ npx expo build:ios
 ```
 
 Or use EAS Build for advanced workflows.
-
