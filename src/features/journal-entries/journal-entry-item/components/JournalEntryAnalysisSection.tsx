@@ -6,19 +6,19 @@ import { TipSection } from './TipSection';
 
 interface Props {
   summary: string | null;
-  themes: string | null;
+  // themes: string | null;
   tip: string | null;
 }
 
 export const JournalEntryAnalysisSection = ({
   summary,
-  themes,
+  // themes,
   tip,
 }: Props) => {
   const theme = useColorScheme() ?? 'light';
   const colors = COLORS[theme];
 
-  if (!summary && !themes && !tip) return null;
+  if (!summary &&  !tip) return null;
 
   return (
     <View
@@ -43,7 +43,7 @@ export const JournalEntryAnalysisSection = ({
         </Text>
       )}
 
-      <ThemesBadges themes={themes} />
+      {/* <ThemesBadges themes={themes} /> */}
       <TipSection tip={tip} />
     </View>
   );

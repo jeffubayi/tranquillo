@@ -4,11 +4,11 @@ export type JournalEntry = {
   content: string;
   mood: string;
   summary: string | null;
-  themes: string | null;
+  // themes: string | null;
   tip: string | null;
   created_at: string;
   mood_score: number | null;
-  localized: Record<string, AnalysedEntry>;
+  // localized: Record<string, AnalysedEntry>;
 };
 
 interface AnalysedEntry {

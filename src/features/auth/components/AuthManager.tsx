@@ -9,7 +9,7 @@ export function AuthManager({ children }: { children: React.ReactNode }) {
   useDeepLinkSession();
   const { loading: authLoading, session } = useSupabaseSession();
   const { data: user, isLoading: profileLoading } = useCurrentUserProfile();
-
+  console.log('AuthManager session:', session,user);
   // Check if navigation is ready
   const rootNavigationState = useRootNavigationState();
   const isNavigationReady = rootNavigationState?.key != null;

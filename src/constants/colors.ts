@@ -1,7 +1,7 @@
 export const APP_COLORS = {
   // Element Colors
   primary: '#05665e',
-  'primary-subtle': '#f5c3a94d',
+  'primary-subtle': '#c5ddda',
   secondary: '#5F5E5F',
   success: '#0B8600',
   error: '#C40000',

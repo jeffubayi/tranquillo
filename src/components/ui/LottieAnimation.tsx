@@ -1,6 +1,6 @@
 import { COLORS } from '@/constants/colors';
 import React, { useState } from 'react';
-import { ActivityIndicator, useColorScheme, View } from 'react-native';
+import { ActivityIndicator, useColorScheme, View, Platform } from 'react-native';
 
 type Props = {
   source: any;
@@ -10,14 +10,16 @@ type Props = {
   fallbackColor?: string;
 };
 
-// Try to import Lottie at the top level
+// Only import Lottie on native platforms
 let LottieView: any = null;
-try {
-  LottieView = require('lottie-react-native').default;
-} catch (error) {
-  console.warn(
-    'Lottie module not available, will use ActivityIndicator fallback'
-  );
+if (Platform.OS !== 'web') {
+  try {
+    LottieView = require('lottie-react-native').default;
+  } catch (error) {
+    console.warn(
+      'Lottie module not available, will use ActivityIndicator fallback'
+    );
+  }
 }
 
 export const LottieAnimation = ({

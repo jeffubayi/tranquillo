@@ -14,24 +14,25 @@ console.log('🔗 Redirect URI:', redirectTo);
 
 export const useAuthActions = () => {
   const sendMagicLink = async (email: string) => {
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        shouldCreateUser: true,
-        emailRedirectTo: redirectTo,
-      },
-    });
+    // const { error } = await supabase.auth.signInWithOtp({
+    //   email,
+    //   options: {
+    //     shouldCreateUser: true,
+    //     emailRedirectTo: redirectTo,
+    //   },
+    // });
 
-    if (error) throw error;
+    // if (error) throw error;
     console.log('✅ Magic link sent');
   };
 
   const signUp = async (email: string, password: string) => {
-    const { data: authData, error } = await supabase.auth.signUp({
+    const { data: authData, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
     console.log('user signed up:', authData.user);
+    console.log('signUp error: ========>', error);
      if (error) throw error;
   };
 

@@ -51,6 +51,11 @@ export default function EntryDetailsScreen() {
 
   const journalEntry = prepareJournalEntry(data);
   const themeList = parseThemes(journalEntry.themes);
+  const mood = journalEntry.mood
+    .replace(/_/g, ' ')
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 
   const handleDelete = async () => {
     Alert.alert('Delete Entry', 'Are you sure you want to delete this entry?', [
@@ -80,7 +85,7 @@ export default function EntryDetailsScreen() {
       {/* Mood + Date */}
       <View>
         <View style={styles.header}>
-          <MoodBadge mood={journalEntry.mood ?? 'neutral'} />
+          <MoodBadge mood={mood ?? 'neutral'} />
           <Text style={[styles.dateText, { color: colors.textMuted }]}>
             {journalEntry.formattedDate}
           </Text>

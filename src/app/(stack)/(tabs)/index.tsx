@@ -50,12 +50,6 @@ export default function HomeDashboardScreen() {
         <QuickStatsGrid />
         <AiInsights />
         <TipCard />
-        <QuickStatsGrid />
-        <AiInsights />
-        <TipCard />
-        <QuickStatsGrid />
-        <AiInsights />
-        <TipCard />
       </ParallaxScrollView>
       <AddJournalEntryButton />
     </View>

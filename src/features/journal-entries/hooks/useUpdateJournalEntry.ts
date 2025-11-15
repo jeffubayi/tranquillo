@@ -48,9 +48,9 @@ export const useUpdateJournalEntry = ({ language }: { language: string }) => {
               mood: aiData.mood,
               mood_score: aiData.mood_score,
               summary: aiData.summary,
-              themes: aiData.themes,
+              // themes: aiData.themes,
               tip: aiData.tip,
-              localized: aiData.localized, // ✅ store translations
+              // localized: aiData.localized, // ✅ store translations
             })
             .eq('id', fields.id);
 

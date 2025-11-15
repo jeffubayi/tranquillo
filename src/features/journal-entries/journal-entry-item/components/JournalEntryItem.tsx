@@ -36,13 +36,15 @@ export const JournalEntryItem = ({ entry }: Props) => {
   const theme = useColorScheme() ?? 'light';
   const colors = COLORS[theme];
 
-  const userLanguage = data?.language || 'en';
 
-  const displayMood = entry.localized?.[userLanguage]?.mood || entry.mood;
-  const displayThemes = entry.localized?.[userLanguage]?.themes || entry.themes;
-  const displaySummary =
-    entry.localized?.[userLanguage]?.summary || entry.summary;
-  const displayTip = entry.localized?.[userLanguage]?.tip || entry.tip;
+  const displayMood = entry.mood
+    .replace(/_/g, ' ')
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+  // const displayThemes =  entry.themes;
+  const displaySummary = entry.summary;
+  const displayTip =  entry.tip;
 
   const { analyzingIds } = useJournalEntryAnalysisStore();
   const isAnalyzing = analyzingIds.includes(entry.id);
@@ -78,7 +80,7 @@ export const JournalEntryItem = ({ entry }: Props) => {
         <View style={styles.analysisContainer}>
           <JournalEntryAnalysisSection
             summary={displaySummary}
-            themes={displayThemes}
+            // themes={displayThemes}
             tip={displayTip}
           />
         </View>
