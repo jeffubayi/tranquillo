@@ -1,8 +1,7 @@
-# 🌿 Tranquillo — A Wellness & Journaling Mobile App
-
-**Tranquillo** is a beautiful minimalistic mobile journaling app designed to help you gain mental clarity, build self-awareness, and track your emotional well-being. Built using **React Native**, **Expo**, and **Supabase**, it features a calm, glassy UI with secure authentication and real-time storage.
 
 ![](https://tranquillo-shop.de/cdn/shop/files/Header_Logo_21869d21-c7db-4b79-8390-eb6ef9651810.png?v=1739175475&width=200&height=100)
+
+**Tranquillo** is a beautiful minimalistic mobile journaling app designed to help you gain mental clarity, build self-awareness, and track your emotional well-being. Built using **React Native**, **Expo**, and **Supabase**, it features a calm, glassy UI with secure authentication and real-time storage.
 
 ## ✨ Features
 
@@ -16,7 +15,7 @@
 
 ## 📱 Screenshots
 
-| Onboarding                        | Login                        | History                        | Journal Entry                      | Edit Journal                        | Profile                        |
+| Onboard                       | Login                        | History                        | Journal Entry                      | Edit Journal                        | Profile                        |
 | ---------------------------- | --------------------------- | ------------------------------ | ---------------------------------- | ----------------------------------- | ------------------------------ |
 | ![](./screenshots/onboarding.png) | ![](./screenshots/auth.png) | ![](./screenshots/history.png) | ![](./screenshots/add-journal.png) | ![](./screenshots/edit.png) | ![](./screenshots/profile2.png) |
 
@@ -65,190 +64,6 @@ npx expo start
 
 Then scan the QR code using your device, or use Android/iOS simulator.
 
-## 📂 Folder Structure
-
-```bash
-.
-├── README.md
-├── app.config.ts
-├── app.json
-├── assets
-│   ├── adaptive-icon.png
-│   ├── animations
-│   │   ├── 404.json
-│   │   ├── error.json
-│   │   └── loading.json
-│   ├── favicon.png
-│   ├── fonts
-│   │   └── SpaceMono-Regular.ttf
-│   ├── icon-transparent.png
-│   ├── icon.png
-│   ├── images
-│   │   ├── hero-1.jpg
-│   │   ├── hero-2.jpg
-│   │   └── hero-3.jpg
-│   └── splash-icon.png
-├── babel.config.js
-├── eas.json
-├── expo-env.d.ts
-├── global.css
-├── metro.config.js
-├── nativewind-env.d.ts
-├── package-lock.json
-├── package.json
-├── polyfills.ts
-├── screenshots
-│   ├── add-journal.png
-│   ├── edit-journal.png
-│   ├── history.png
-│   ├── home.png
-│   ├── login.png
-│   └── profile.png
-├── src
-│   ├── app
-│   │   ├── (tabs)
-│   │   │   ├── _layout.tsx
-│   │   │   ├── history
-│   │   │   │   ├── _layout.tsx
-│   │   │   │   ├── add-entry.tsx
-│   │   │   │   ├── edit-entry
-│   │   │   │   │   └── [id].tsx
-│   │   │   │   ├── entry-details
-│   │   │   │   │   └── [id].tsx
-│   │   │   │   └── index.tsx
-│   │   │   ├── index.tsx
-│   │   │   └── profile
-│   │   │       ├── _layout.tsx
-│   │   │       ├── edit-profile.tsx
-│   │   │       └── index.tsx
-│   │   ├── +not-found.tsx
-│   │   ├── _layout.tsx
-│   │   └── login.tsx
-│   ├── components
-│   │   ├── EmptyState.tsx
-│   │   ├── ErrorState.tsx
-│   │   ├── HapticTab.tsx
-│   │   ├── LoadingState.tsx
-│   │   ├── ParallaxScrollView.tsx
-│   │   ├── SplashScreen.tsx
-│   │   ├── ThemedCard.tsx
-│   │   ├── ThemedText.tsx
-│   │   ├── ThemedView.tsx
-│   │   ├── card
-│   │   │   ├── Card.tsx
-│   │   │   └── GlassCard.tsx
-│   │   ├── floating-button
-│   │   │   └── FloatingButton.tsx
-│   │   ├── layouts
-│   │   │   ├── RootLayoutContent.tsx
-│   │   │   ├── SafeScrollView.tsx
-│   │   │   └── ThemedSafeAreaView.tsx
-│   │   ├── tab-bar
-│   │   │   ├── HapticTab.tsx
-│   │   │   ├── TabBar.tsx
-│   │   │   ├── TabBarBackground.tsx
-│   │   │   └── TabBarButton.tsx
-│   │   └── ui
-│   │       ├── IconSymbol.ios.tsx
-│   │       ├── IconSymbol.tsx
-│   │       ├── LottieAnimation.tsx
-│   │       ├── LottieTest.tsx
-│   │       └── TabBarBackground.tsx
-│   ├── constants
-│   │   └── colors.ts
-│   ├── features
-│   │   ├── auth
-│   │   │   ├── components
-│   │   │   │   ├── LoginForm.tsx
-│   │   │   │   └── LogoutButton.tsx
-│   │   │   └── hooks
-│   │   │       ├── useAuthActions.ts
-│   │   │       └── useDeepLinkSession.ts
-│   │   ├── dashboard
-│   │   │   ├── components
-│   │   │   │   ├── AiInsights.tsx
-│   │   │   │   ├── DashboardSection.tsx
-│   │   │   │   ├── LastEntrySummary.tsx
-│   │   │   │   ├── MoodPrompt.tsx
-│   │   │   │   ├── QuickStats.tsx
-│   │   │   │   └── TipCard.tsx
-│   │   │   └── utils
-│   │   │       ├── analyzeEntries.ts
-│   │   │       ├── generateMoodTipMessage.ts
-│   │   │       └── getTipForMood.ts
-│   │   ├── journal-entries
-│   │   │   ├── api
-│   │   │   │   └── callAnalyzeEntryFunction.ts
-│   │   │   ├── components
-│   │   │   │   ├── EditJournalEntry.tsx
-│   │   │   │   ├── EditJournalModal.tsx
-│   │   │   │   ├── JournalEntries.tsx
-│   │   │   │   └── JournalEntryList.tsx
-│   │   │   ├── hooks
-│   │   │   │   ├── useCreateJournalEntry.ts
-│   │   │   │   ├── useCurrentUserEntries.ts
-│   │   │   │   ├── useDeleteJournalEntry.ts
-│   │   │   │   ├── useHandleJournalEntryCreation.ts
-│   │   │   │   ├── useJournalEntries.ts
-│   │   │   │   ├── useJournalEntryById.ts
-│   │   │   │   └── useUpdateJournalEntry.ts
-│   │   │   ├── journal-entry-item
-│   │   │   │   ├── components
-│   │   │   │   │   ├── JournalEntryActions.tsx
-│   │   │   │   │   ├── JournalEntryAnalysisSection.tsx
-│   │   │   │   │   ├── JournalEntryContent.tsx
-│   │   │   │   │   ├── JournalEntryItem.tsx
-│   │   │   │   │   ├── MoodBadge.tsx
-│   │   │   │   │   ├── ThemeBadge.tsx
-│   │   │   │   │   ├── ThemesBadges.tsx
-│   │   │   │   │   └── TipSection.tsx
-│   │   │   │   ├── constants.ts
-│   │   │   │   └── utils.ts
-│   │   │   ├── store
-│   │   │   │   ├── useJournalEntriesStore.ts
-│   │   │   │   └── useJournalEntryAnalysisStore.ts
-│   │   │   └── types.ts
-│   │   ├── profile
-│   │   │   ├── components
-│   │   │   │   ├── ProfileAvatar.tsx
-│   │   │   │   ├── ProfileDetails.tsx
-│   │   │   │   ├── ProfileDetailsWithForm.tsx
-│   │   │   │   └── ProfileForm.tsx
-│   │   │   ├── hooks
-│   │   │   │   ├── useUpdateUserProfile.ts
-│   │   │   │   └── useUserProfile.ts
-│   │   │   └── utils
-│   │   │       └── renderField.tsx
-│   │   └── user
-│   │       ├── hooks
-│   │       │   └── useCurrentUserProfile.ts
-│   │       ├── store
-│   │       │   └── userStore.ts
-│   │       └── types.ts
-│   ├── hooks
-│   │   ├── useColorScheme.ts
-│   │   ├── useColorScheme.web.ts
-│   │   ├── useDebounce.ts
-│   │   └── useThemeColor.ts
-│   ├── lib
-│   │   └── queryKeys.ts
-│   ├── scripts
-│   │   └── seedDatabase.ts
-│   ├── services
-│   │   ├── SupabaseAuthProvider.tsx
-│   │   └── supabase.ts
-│   └── utils
-│       ├── clsx.ts
-│       └── moodUtils.ts
-├── supabase
-│   ├── config.toml
-│   └── functions
-│       └── analyzeEntry
-│           ├── deno.json
-│           └── index.ts
-├── tailwind.config.js
-└── tsconfig.json
-```
 
 ## 📦 Dependencies Overview
 
@@ -275,30 +90,3 @@ npx expo build:ios
 
 Or use EAS Build for advanced workflows.
 
-## 🤝 Contributing
-
-If you'd like to contribute:
-
-- Fork this repo
-
-- Create a new branch: git checkout -b feature/feature-name
-
-- Commit your changes
-
-- Push your branch: git push origin feature/feature-name
-
-- Submit a Pull Request
-
-## 📄 License
-
-MIT License © 2025 Jeff Ubayi
-
-## 🙌 Acknowledgements
-
-- Supabase
-
-- Expo
-
-- GitHub Primer
-
-- Inspiration from wellness UI kits and Apple’s glass design aesthetics
