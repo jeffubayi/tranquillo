@@ -30,7 +30,6 @@ interface ProcessedAIData {
 }
 
 const thera_api = process.env.EXPO_PUBLIC_THERA_API_KEY!;
-console.log('Thera API Key:', thera_api);
 // Map mood rating to mood string
 const getMoodFromRating = (rating: number): string => {
   if (rating <= 2) return 'very_negative';
