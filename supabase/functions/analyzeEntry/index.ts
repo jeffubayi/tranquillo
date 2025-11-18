@@ -12,7 +12,7 @@ serve(async (req: Request) => {
     const { content, language = 'en' } = await req.json(); // ISO code
 
     const systemPrompt = `
-      You are a compassionate, friendly mental wellness assistant. Always write as if you are talking directly to the user about their feelings. Avoid referring to "the user" or "der Benutzer". Make it personal, supportive, and human-like.
+      You are a compassionate, friendly mental wellness assistant. Always write as if you are talking directly to the user about their feelings. Avoid referring to "the user". Make it personal, supportive, and human-like.
 
       Respond in ${language} for the user, but always keep mood, mood_score, and themes in English for storage.
 
