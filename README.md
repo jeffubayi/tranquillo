@@ -17,7 +17,7 @@
 
 | Onboard                       | Login                        | History                        | Journal Entry                      | Edit Journal                        | Profile                        |
 | ---------------------------- | --------------------------- | ------------------------------ | ---------------------------------- | ----------------------------------- | ------------------------------ |
-| ![](./screenshots/onboarding.png) | ![](./screenshots/auth.png) | ![](./screenshots/history.png) | ![](./screenshots/add-journal.png) | ![](./screenshots/edit.png) | ![](./screenshots/profile2.png) |
+| ![](./screenshots/onboarding.png) | ![](./screenshots/auth.png) | ![](./screenshots/history.png) | ![](./screenshots/add-journal.png) | ![](./screenshots/edit-journal.png) | ![](./screenshots/profile2.png) |
 
 ## 🛠️ Tech Stack
 
